@@ -1,0 +1,105 @@
+\documentclass[11pt]{article}
+\usepackage{amsfonts}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\title{HomeWork 6}
+\author{Ankit Sompura}
+\newcommand\Inn{%
+  \mathrel{\ooalign{$\subset$\cr\hfil\scalebox{0.8}[1]{$=$}\hfil\cr}}%
+}
+\begin{document}
+
+\maketitle
+
+\section{Modular Exponentiation}
+1. Compute the binary expansion of 2019 \\\\
+\textbf{ANSWER}: \\
+$011111100011$\\\\
+2. Compute the $13^{2019}$
+(mod 37)\\\\
+\textbf{WORK}:\\
+$011111100011$\\\\
+$2^0 + 2^1 + 2^6 + 2^7 + 2^8 + 2^9 + 2^{10} + 2^{11}$\\\\
+$ 1 + 2 + 64 + 128 + 256 + 512 + 1024 + 2048  $ \\\\
+$13^{(1 + 2 + 64 + 128 + 256 + 512 + 1024 + 2048)}$
+mod 37\\\\
+$13^1 * 13^2 * 13^{64} * 13^{128} * 13^{256} * 13^{512} * 13^{1024} * 13^{2048}$
+mod 37\\\\
+$(13^1$ 
+mod 37 
+$* 13^2$
+mod 37 
+$ * 13^{64} $
+mod 37 
+$* 13^{128} $
+mod 37
+$* 13^{256}$
+mod 37
+$ * 13^{512}$
+mod 37
+$ * 13^{1024}$
+mod 37
+$ * 13^{2048}$
+mod 37)
+mod 37\\\\
+$13^{2019}$
+mod 37 $= ( 13 * 21 * 33 * 16 * 34 * 9 * 7 * 12)$
+mod 37\\\\
+\textbf{ANSWER:} \\
+$14$\\\\
+
+
+
+
+
+
+
+\section{Greatest Common Divisor}
+1. gcd(288, 126)\\\\
+\textbf{WORK:} \\\\
+$\frac{288}{126} = $
+2 R 36\\\\
+$\frac{126}{36} = $
+3 R 18 \\\\
+$\frac{36}{18} = $
+2 R 0\\\\
+\textbf{ANSWER}: \\\\
+18\\\\
+2. gcd(899,703)\\\\
+\textbf{WORK:}\\\\
+$\frac{899}{703} = $
+1 R 196\\\\
+$\frac{703}{196} = $
+3 R 115 \\\\
+$\frac{196}{115} = $
+1 R 81 \\\\
+$\frac{115}{81} = $
+1 R 34\\\\
+$\frac{81}{34} = $
+2 R 13 \\\\
+$\frac{34}{13} = $
+2 R 8 \\\\
+$\frac{13}{8} = $
+1 R 5 \\\\
+$\frac{8}{5} = $
+1 R 3 \\\\
+$\frac{5}{3} = $
+1 R 2\\\\
+$\frac{3}{2} = $
+1 R 1\\\\
+$\frac{2}{1} = $
+2 R 0\\\\
+\textbf{ANSWER}: \\
+1
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

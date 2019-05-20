@@ -1,0 +1,97 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\title{Homework 2}
+\author{Ankit Sompura}
+
+\begin{document}
+
+\maketitle
+
+\section{Knowledge Representation}
+1. It is not cloudy and it is not raining \\\\
+\textbf{Solution}  Let $p$ = It is not cloudy, and let $q$ = it is not raining, then $p \land q \\\\
+$
+2. I like to eat apples and bananas \\\\
+\textbf{Solution} Let $p$ = I like to eat apple, and let $q$ = bananas, then $p \land q \\\\
+$
+3. Behind the clouds the sun is shining \\\\ 
+\textbf{Solution} Let $p$ = Behind the clouds, and let $q$ = sun is shining, then $p \rightarrow q \\\\
+$
+4.  If a function is differentiable then the function is continuous.\\\\
+\textbf{Solution} Let $p$ = If a function is differentiable, and let $q$ = the function is continuous, \\then $p \rightarrow q \\\\
+$
+5.  I will study for the final otherwise I will fail. \\\\
+\textbf{Solution} Let $p$ = I will study for the final, and let $q$ = I will fail, then $p \neg q \\\\
+$
+
+
+
+\section{Equivalence in Propositional Logic}
+
+1. $p \land q$ and $p \lor \neg q $ \\
+no, the truth tables are not equal for both logical statements \\\\
+\begin{tabular}{|c|c|c|c|}
+\hline
+$p$ & $q$ & $p \land q$ & $p \lor  \lnot q$ \\
+\hline
+0 & 0 & 0 & 1 \\
+0 & 1 & 0 & 0 \\
+1 & 0 & 0 & 1 \\
+1 & 1 & 1 & 1 \\
+\hline
+\end{tabular} \\\\
+2. $ p \lor q $ and $ \neg p \lor \neg q $ \\
+no, the truth tables are not equal for both logical statements\\\\
+\begin{tabular}{|c|c|c|c|}
+\hline
+$p$ & $q$ & $p \lor q$ & $ \lnot p \lor  \lnot q$ \\
+\hline
+0 & 0 & 0 & 1 \\
+0 & 1 & 1 & 1 \\
+1 & 0 & 1 & 1 \\
+1 & 1 & 1 & 0 \\
+\hline
+\end{tabular} \\\\
+3. $p \rightarrow q $ and $ \neg q \rightarrow \neg p $\\
+No, the truth tables are not equal for both logical statements \\\\
+\begin{tabular}{|c|c|c|c|}
+\hline
+$p$ & $q$ & $p \to q$ & $ \lnot p \to  \lnot q$ \\
+\hline
+0 & 0 & 1 & 1 \\
+0 & 1 & 1 & 0 \\
+1 & 0 & 0 & 1 \\
+1 & 1 & 1 & 1 \\
+\hline
+\end{tabular} \\\\
+4. $p \rightarrow q$ and $ \neg p \lor q $\\
+Yes, the truth tables are equal \\\\
+\begin{tabular}{|c|c|c|c|}
+\hline
+$p$ & $q$ & $p \to q$ & $ \lnot p \lor q$ \\
+\hline
+0 & 0 & 1 & 1 \\
+0 & 1 & 1 & 1 \\
+1 & 0 & 0 & 0 \\
+1 & 1 & 1 & 1 \\
+\hline
+\end{tabular}\\\\
+5. $\neg (p \land q)$ and $\neg p \lor \neg q$ \\
+Yes, the truth tables are equal \\\\
+\begin{tabular}{|c|c|c|c|}
+\hline
+$p$ & $q$ & $ \lnot (p \land q)$ & $ \lnot p \lor  \lnot q$ \\
+\hline
+0 & 0 & 1 & 1 \\
+0 & 1 & 1 & 1 \\
+1 & 0 & 1 & 1 \\
+1 & 1 & 0 & 0 \\
+\hline
+\end{tabular}
+
+
+
+
+\end{document}

@@ -1,0 +1,131 @@
+\documentclass[11pt]{article}
+\usepackage{amsfonts}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\title{HomeWork 5}
+\author{Ankit Sompura}
+\newcommand\Inn{%
+  \mathrel{\ooalign{$\subset$\cr\hfil\scalebox{0.8}[1]{$=$}\hfil\cr}}%
+}
+\begin{document}
+
+\maketitle
+
+\section{Complexity Analysis}
+
+
+	1.	\indent def doNothing(someList):\\
+			\indent \indent \indent return False\\\\
+			Answer: O(1)\\\\
+	2. 	\indent def do Something(someList):\\
+	\indent \indent \indent if len(someList)$ == 0:$ \\
+	\indent \indent \indent \indent return $0$\\
+	\indent \indent \indent else if len(list $ == 1):$\\
+	\indent \indent \indent \indent return $1$\\
+	\indent \indent \indent else:\\
+	\indent \indent \indent \indent return doSomething(someList[1:])\\\\
+	Answer: O(n)\\\\
+
+	3. \indent def doSomethingElse(someList):\\
+			\indent \indent \indent \indent  n = len(someList)\\
+			\indent \indent \indent \indent for i in range(n):\\
+			\indent \indent \indent \indent \indent for j in range(n):\\
+			\indent \indent \indent \indent \indent \indent if someList[1] $>$
+			 someList[j]:\\
+			\indent \indent \indent \indent \indent \indent \indent temp = someList[1]\\
+			\indent \indent \indent \indent \indent \indent \indent someList[i] = someList[j] \\
+			\indent \indent \indent \indent \indent \indent \indent someList[j] = temp\\
+			\indent \indent \indent \indent return someList \\
+			Answer: $O(n^2)$\\\
+
+
+\section{Order of Complexity}
+
+	1. $f(n) = 3n + 2 \in O(n)$\\\\
+	Answer:\\
+	$ c * n  \geq  3n + 2  \hspace{.5cm} \forall n_0 $\\
+	$2n + 3n \geq 3n+2  \ \forall n > 0 $\\
+	$ 2n \geq 2$\\
+	$n \geq 1$\\
+inequality holds
+	2. $g(n) = 7 \in O(1)$\\\\
+	Answer:\\
+	g(n) = $ 7 \in O(1)$\\
+	$ c * n \geq 7$\\
+	$ 7(n) \geq 7$\\
+	$ n \geq 1$\\
+
+	3. $h(n) = n^2 + 2n + 4 \in O(n^2)$\\\\
+	Answer:\\
+h(n) = $ n^{2} + 2n + 4 \in O(n^{2})$\\
+$c * n^{2} \geq N^{2} +2n + 4 \ \forall > n_0 $\\
+$ 7n^{2} \geq n^{2} + 2n + 4 $\\
+$ 6n^{2} + n^{2} \geq n^{2} + 2n + 4  \  \forall n > 1$\\
+$ 6n^{2} \geq 2n + 4 $\\
+$  n^{2} \geq  \frac{1}{3n} + \frac{2}{3}$\\
+
+
+\section{Mathematical Induction}
+
+
+1. $ 1 + 2 + 3 + ... + n = \frac{n(n+1)}{2}$\\\\
+		Answer:\\
+base case
+$1+2+3+...+n = \frac{n(n+1)}{2}$\\
+$n=1$\\
+$1 = \frac{1(1+1)}{2}$\\
+$1 = 1$\\
+is true\\
+inductive hypothesis \\
+assume n = k\\
+$1+2+3+...+k = \frac{k(k+1)}{2}$\\
+$1+2+3+...+ k + k+1 = \frac{k+1( k+1+1)}{2}$\\\
+$ \frac{k(k+1)}{2} + k+1 = \frac{k^2+3k+2}{2}  $\\\\
+$ \frac{k^{2}  }{2} + \frac{k}{2} + k +1 = \frac{k^{2}}{2} + \frac{3k}{2} +1 $\\\\
+$ \frac{k^{2}}{2} + \frac{3k}{2} +1  = \frac{k^{2}}{2} + \frac{3k}{2} + 1 $\\\\
+is true\\\\
+
+
+
+2. $ 2 + 2^2 + 2^3 + 2^4 + ... + 2^n = $
+	$2^(n+1)$
+	$ - 2$\\\\
+Answer:\\
+base case\\
+$ 2n^{2} + 2n^{3} + 2n^{4}  $ ... $ + 2n^{n}$ = $ 2n^{n+1} -2  $\\
+$2+2^{2}+2^{3}+2^{4}+ ... + 2^{n} = 2^{n+1} -2$\\\
+$n=1$\\
+$2^{1} = 2^{1+1} -2$\\\
+$ 2 = 2^{2} -2$\\\
+$ 2 = 4-2 $\\\
+$2 =2 $\\
+is true\\
+inductive hypothesis\\ 
+assume n = k \\
+$ 2+2^{2}+2^{3}+2^{4}+2^{k} = 2^{k+1} -2 $\\
+$ 2^{k+1} -2 + 2^{k+1 +1} -2$\\\\
+$ 2^{k+1} -2 +2^{k+1} = 2^{k+2}-2$\\\\
+$ 2^{k+2} -2 = 2^{k+2} -2 $\\\\
+is true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

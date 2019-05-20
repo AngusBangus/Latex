@@ -1,0 +1,198 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\title{Homework 3}
+\author{Ankit Sompura}
+
+\begin{document}
+
+\maketitle
+
+\section{Knights and Knaves}
+
+1. One day a traveller was wandering around the island of Knights and Knaves, when he encountered two local inhabitants, $P$ and $Q$.  The traveller asked:  “Is any of you a knave?”. $P$ replied:  “At least one of us is a knave”.\\\\
+
+Can you find out what $P$ and $Q$ are?  If so, what are they?  If not, explain why not, and what other information you would need to know.\\\\
+
+Yes you can find out what $P$ and $Q$ are.\\\\
+P is a Knight \\\\
+Q is a Knave \\\\
+
+
+
+
+
+2. Later on, the traveller met two other locals , $A$ and $B$.  He asked whether either of them is a knight . $A$ replied:  “If $B$ is a knave, then I am a knave too”.\\\\
+
+
+What are $A$ and $B$?\\\\
+A is a Knight\\\\
+B is a Knight\\\\ \\\\
+
+
+
+
+\section{Logical Identities} 
+
+1. $ \neg ( p \rightarrow( q \rightarrow p )) $\\\\ 
+$ \neg ( p \rightarrow( \neg p \land q)) $ 
+Implication Rule \\\\
+$ \neg (( p \rightarrow \neg p ) \land (p \rightarrow q )) $
+Distribution Rule \\\\
+$ \neg (( \neg p \land \neg p) \land (\neg p \land q)) $ 
+Implication Rule \\\\
+$ (( \neg \neg p \land \neg \neg p) \land ( \neg \neg p \land q)) $
+DeMorgans Rule \\\\
+$ ((p \land p) \land ( p \land q )) $ 
+Double Negative \\\\
+$ (T) \land (p \land q) $ 
+Idempotent Laws \\\\
+Simplified Answer \\\\
+$ p \land q $ \\\\
+
+
+
+2. $\neg ((p \land q) \rightarrow (q \lor p))$\\\\
+$ (\neg p \lor \neg q) \rightarrow ( \neg q \land \neg p)$
+DeMorgans Law \\\\
+$ \neg ( \neg p \lor \neg q) \lor (\neg q \land \neg p) $ 
+Implication Rule \\\\
+$ ( \neg \neg p \land \neg \neg q) \lor ( \neg q \land \neg p) $ 
+DeMorgans Law \\\\
+$ (p \land q ) \lor ( \neg q \land \neg p) $ 
+Double Negative \\\\
+$ (p \land \neg p) \lor ( q \land \neg q) $
+Associative \\\\
+$ F \lor F $ 
+Identity Laws \\\\
+Simplified Answer: \\\\
+\textbf {Contradiction}
+
+\section{Logical Equivalences}
+
+1. $p \rightarrow ( q \rightarrow r) and (p \lor q) \rightarrow r $\\\\
+
+LeftSide: \\\\
+$ p \rightarrow ( \neg q \lor r ) $ 
+Implication Rule \\\\
+$ (p \rightarrow \neg q) \lor ( p \rightarrow r ) $ 
+Distribution Law \\\\
+$ (\neg p \lor \neg q) \lor ( \neg p \lor r ) $ 
+Implication Rule \\\\
+$ (\neg p \lor \neg p ) \lor ( \neg q \lor r ) $ 
+Associative Law \\\\ 
+$ F \lor ( \neg q \lor r ) $ 
+Identity Law \\\\ 
+Left Side Answer :
+$(\neg q \lor r ) $ \\\\
+
+Right Side: \\\\
+$(p \rightarrow r) \lor (p \rightarrow q)$
+Distributive Law \\\\ 
+$ (\neg p \lor r ) \land ( \neg p \lor q ) $
+Implication Law \\\\ 
+$ ( \neg p \lor \neg p ) \land ( r \lor q) $ 
+Identity Laws \\\\ 
+$ F \land (q \lor r )$ \\\\
+Answer: \\\\
+$ ( \neg q \lor r)$ and $(q \lor r) $ \\\\
+\textbf {They are not equivalent} \\\\
+
+2. $p \rightarrow (q \rightarrow r) and (p \rightarrow q) \rightarrow r $\\\\
+LeftSide: \\\\
+$ p \rightarrow ( \neg q \lor r ) $ 
+Implication Rule \\\\
+$ (p \rightarrow \neg q) \lor ( p \rightarrow r ) $ 
+Distribution Law \\\\
+$ (\neg p \lor \neg q) \lor ( \neg p \lor r ) $ 
+Implication Rule \\\\
+$ (\neg p \lor \neg p ) \lor ( \neg q \lor r ) $ 
+Associative Law \\\\ 
+$ F \lor ( \neg q \lor r ) $ 
+Identity Law \\\\ 
+Left Side Answer :
+$(\neg q \lor r ) $ \\\\
+Right Side: \\\\
+$ (\neg p \lor q ) \rightarrow r $ 
+Implication Rule \\\\
+$ (\neg p \rightarrow r) \lor ( q \rightarrow r ) $ 
+Distribution Rule \\\\
+$ (\neg \neg p \lor r ) \lor ( \neg q \lor r ) $ 
+Implication Rule \\\\
+$ ( p \lor r) \lor ( \neg q \lor r ) $ 
+double negative \\\\ 
+$ (r \lor r) \lor ( \neg q \lor p) $ 
+Associative property \\\\
+$ T \lor (\neg q \lor p) $ 
+Identity law \\\\
+$ (\neg q \lor p) $ 
+Answer: \\\\
+$(\neg q \lor r ) $ and $ (\neg q \lor p) $ \\\\
+\textbf { NOT EQUAL } 
+
+
+
+\section{Logical Consequence}
+
+
+1.  
+\begin{tabular}{cccc}
+ Jimmy  is smart \\
+ Smart people  are rich \\
+\hline
+Jimmy is rich\\
+\end{tabular}\\\\\\\\\
+The Statement is valid by Hypothetical Syllogism. \\\\
+\begin{tabular}{cccc}
+$ P \rightarrow Q $ \\
+$ Q \rightarrow R $ \\
+\hline
+$ P \rightarrow R $\\
+\\\end{tabular}\\\\\\\\\
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $r$ & $p \to q$ & $q \to r$ & $p \to r$ \\
+\hline
+0 & 0 & 0 & 1 & 1 & 1 \\
+0 & 0 & 1 & 1 & 1 & 1 \\
+0 & 1 & 0 & 1 & 0 & 1 \\
+0 & 1 & 1 & 1 & 1 & 1 \\
+1 & 0 & 0 & 0 & 1 & 0 \\
+1 & 0 & 1 & 0 & 1 & 1 \\
+1 & 1 & 0 & 1 & 0 & 0 \\
+1 & 1 & 1 & 1 & 1 & 1 \\
+\hline
+\end{tabular}
+
+
+
+2. 
+\begin{tabular}{cccc}
+ Islands are surrounded by water \\
+Puerto Rico is surrounded by water\\
+\hline
+Puerto Rico is an island\\
+\end{tabular} \\\\\\\\
+The Statement is valid because of the conjunction rule \\\\
+\begin{tabular}{cccc}
+P \\
+Q \\
+\hline
+$ P \land Q$ \\
+\end{tabular}\\\\\\\\\
+\begin{tabular}{|c|c|c|}
+\hline
+$p$ & $q$ & $p \land q$ \\
+\hline
+0 & 0 & 0 \\
+0 & 1 & 0 \\
+1 & 0 & 0 \\
+1 & 1 & 1 \\
+\hline
+\end{tabular}\\\\
+
+
+
+
+
+\end{document}
